@@ -13,11 +13,6 @@ jobs:
           fetch-depth: 0
           lfs: true
       
-      - name: Setup files for HF Space
-        run: |
-          cp app.py hf_space/
-          cp requirements.txt hf_space/
-      
       - name: Push to HF Space
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
